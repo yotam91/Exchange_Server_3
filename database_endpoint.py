@@ -145,10 +145,9 @@ def order_validation(existing_order):
     return True
 
 
-
 def verifyEth(content):
     valid_eth = False
-    eth_pk = content['payload']['pk']
+    eth_pk = content['payload']['sender_pk']
     payload = content['payload']
     payload = json.dumps(payload)
     eth_encoded_msg = eth_account.messages.encode_defunct(text=payload)
@@ -158,15 +157,12 @@ def verifyEth(content):
     return valid_eth
 
 
-
 def verifyAlg(content):
-    valid_alg = False
     payload = content['payload']
     algo_sig_str = content['sig']
-    algo_pk = payload['pk']
+    algo_pk = payload['sender_pk']
     payload = json.dumps(payload)
     if algosdk.util.verify_bytes(payload.encode('utf-8'), algo_sig_str, algo_pk):
         print("Algo sig verifies!")
-        valid_alg = True
-    return valid_alg
-
+        return True
+    return False
