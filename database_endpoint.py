@@ -139,18 +139,9 @@ def order_insertion(order):
 
 
 def order_validation(existing_order):
-   sig = existing_order.signature
-    sender_pk = existing_order.sender_pk
-    receiver_pk = existing_order.receiver_pk
-    buy_currency = existing_order.buy_currency
     sell_currency = existing_order.sell_currency
-    buy_amount = existing_order.buy_amount
-    sell_amount = existing_order.sell_amount
-    platform = sell_currency
-
     if sell_currency != "Ethereum" and sell_currency != "Algorand":
         return False
-
     return True
 
 
