@@ -43,4 +43,3 @@ class Log(Base):
 
 engine = create_engine('sqlite:///orders.db')
 Base.metadata.create_all(engine)
-
