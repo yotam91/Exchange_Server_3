@@ -177,4 +177,15 @@ def verifyAlg(content):
     return False
 
 
-
+if __name__ == '__main__':
+    #content = {'sig':'0xd51babaaefe9cacbfae8bed46434399ad05700403ee7aa51c83ddb5d04ab7d4d4cb5307263812ea0c002cf6aebed2c0677adf0d74529d68ca59bbdb81ccdd4da1c', 'payload': {'platform': 'Ethereum', 'sender_pk': '0x906DB3244Eea11815EABEf36f8bcbbF47C92765C', 'receiver_pk': 'a651c757d3488953430969a31d480d4bf8cb4e16952ed41fee1feef764ee3df6', 'buy_currency': 'Algorand', 'sell_currency': 'Ethereum', 'sell_amount': 5172, 'buy_amount': 15516}}
+    #verifyAlg(content)
+    app.run(port='5002')
+    #order_book()
+#        'sig': '0xd51babaaefe9cacbfae8bed46434399ad05700403ee7aa51c83ddb5d04ab7d4d4cb5307263812ea0c002cf6aebed2c0677adf0d74529d68ca59bbdb81ccdd4da1c',
+#        'payload': {'platform': 'Ethereum', 'sender_pk': '0x906DB3244Eea11815EABEf36f8bcbbF47C92765C',
+#                    'receiver_pk': 'a651c757d3488953430969a31d480d4bf8cb4e16952ed41fee1feef764ee3df6',
+#                    'buy_currency': 'Algorand',
+#                    'sell_currency': 'Ethereum',
+#                    'sell_amount': 5172,
+#                    'buy_amount': 15516}}
